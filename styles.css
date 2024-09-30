@@ -1,0 +1,108 @@
+body {
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px; /* Add some padding around the body */
+    text-align: center; /* Center-align all text elements */
+}
+
+.container {
+    max-width: 600px; /* Limit the max width of the container */
+    margin: 0 auto; /* Center the container */
+    padding: 40px; /* Add padding inside the container */
+    background-color: #ffffff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: absolute; /* Absolute positioning for centering */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for the size of the element */
+}
+
+h1 {
+    font-size: 32px; /* Adjust heading size */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+.options {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between items */
+    margin-bottom: 20px; /* Space below options */
+}
+
+.option {
+    flex: 1; /* Allow both options to take equal space */
+    margin: 0 10px; /* Equal margin on left and right */
+}
+
+label {
+    display: block; /* Display label as a block for better spacing */
+    margin-bottom: 5px; /* Space between label and input */
+}
+
+input[type="text"] {
+    width: 100%; /* Full width for input */
+    padding: 10px; /* Padding inside input */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px; /* Rounded corners for input */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+button {
+    background-color: #007bff; /* Button color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners for button */
+    padding: 10px 20px; /* Padding inside button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Button text size */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+footer {
+    margin-top: 20px; /* Space above footer */
+    font-size: 14px; /* Smaller font size for footer */
+    color: #666; /* Footer text color */
+}
+
+#result {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center elements horizontally */
+}
+
+.decision-text {
+    font-size: 32px; /* Same size as decision heading */
+    font-weight: bold; /* Keep bold style */
+    color: #87CEEB; /* Light blue color */
+    margin: 20px 0; /* Add space above and below the decision text */
+}
+
+#result h2 {
+    font-size: 20px; /* Adjust size for motivational text */
+    margin-top: 10px; /* Space above motivational text */
+    color: #555; /* Different color for emphasis */
+}
+
+.make-another {
+    display: inline-block; /* Center the clickable box */
+    background-color: #d3d3d3; /* Grey background */
+    color: black; /* Text color */
+    padding: 10px 20px; /* Padding inside box */
+    border-radius: 5px; /* Rounded corners for box */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-top: 20px; /* Space above the clickable box */
+    font-size: 18px; /* Font size for clickable box */
+}
+
+.make-another:hover {
+    background-color: #c0c0c0; /* Darker shade on hover */
+}
+
+/* Remove outline from input elements */
+input:focus {
+    outline: none; /* Remove blue outline */
+}

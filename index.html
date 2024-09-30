@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decidify</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="mainPage">
+        <h1>WHAT DO YOU NEED TO DECIDE BETWEEN?</h1>
+        <div class="options">
+            <div class="option">
+                <label for="option1">OPTION 1</label>
+                <input type="text" id="option1" placeholder="Enter first option">
+            </div>
+            <div class="option">
+                <label for="option2">OPTION 2</label>
+                <input type="text" id="option2" placeholder="Enter second option">
+            </div>
+        </div>
+        <button id="decideButton">DECIDE FOR ME</button>
+        <footer>made by @marchianoloen 2024</footer>
+    </div>
+
+    <!-- Page 2 -->
+    <div id="result" class="container" style="display: none;">
+        <h1>THIS IS THE DECISION:</h1>
+        <p id="decisionText" class="decision-text"></p>
+        <h2>NOW GO DO SOME USEFUL SH*T!</h2>
+        <div class="make-another" id="makeAnotherDecision">Make Another Decision</div>
+        <footer>made by @marchianoloen 2024</footer>
+    </div>
+
+    <script>
+        document.getElementById('decideButton').addEventListener('click', function() {
+            var option1 = document.getElementById('option1').value;
+            var option2 = document.getElementById('option2').value;
+
+            if (option1 && option2) {
+                var decision = Math.random() < 0.5 ? option1 : option2;
+                document.getElementById('decisionText').textContent = decision;
+                document.querySelector('#mainPage').style.display = 'none';
+                document.getElementById('result').style.display = 'block';
+            } else {
+                alert('Please enter both options.');
+            }
+        });
+
+        document.getElementById('makeAnotherDecision').addEventListener('click', function() {
+            document.getElementById('result').style.display = 'none';
+            document.querySelector('#mainPage').style.display = 'block';
+            document.getElementById('option1').value = ''; // Clear input
+            document.getElementById('option2').value = ''; // Clear input
+        });
+    </script>
+</body>
+</html>
